@@ -34,6 +34,7 @@ async function poolsFunction(timestamp, block, chainBlocks) {
       apyBase: apyPercentage,
       underlyingTokens: [WTLOS],
       searchTokenOverride: sTLOS,
+      isIntrinsicSource: true,
     },
   ];
 }

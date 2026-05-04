@@ -32,6 +32,7 @@ const apy = async () => {
       apyBase,
       underlyingTokens: [SOL],
       searchTokenOverride: INF_MINT,
+      isIntrinsicSource: true,
     },
   ];
 };

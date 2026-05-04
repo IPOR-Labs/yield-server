@@ -39,6 +39,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: JAGSOL_MINT,
       poolMeta: feePct,
+      isIntrinsicSource: true,
     },
   ];
 };

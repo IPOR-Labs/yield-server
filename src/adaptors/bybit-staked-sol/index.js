@@ -30,6 +30,7 @@ const apy = async () => {
       apy: bbSolApy,
       underlyingTokens: [SOL],
       searchTokenOverride: BBSOL_ADDRESS,
+      isIntrinsicSource: true,
     },
   ];
 };

@@ -45,6 +45,7 @@ interface Pool {
   url?: string;
   token?: string; // the pool's token contract address (e.g. the LP token or receipt token address)
   searchTokenOverride?: string; // override token used for search/display matching (see below)
+  isIntrinsicSource?: boolean; // marks LST/LRT/yield-bearing stablecoin primitives used for intrinsic APY linkage
   // optional lending protocol specific fields:
   apyBaseBorrow?: number;
   apyRewardBorrow?: number;
@@ -58,6 +59,7 @@ interface Pool {
 
 - **`token`** — The pool's token contract address. This is the actual token associated with the pool (e.g. the LP token, vault receipt token, or staked asset address). Currently optional but will eventually be required for all adaptors.
 - **`searchTokenOverride`** — Used for LSTs (Liquid Staking Tokens), LRTs (Liquid Restaking Tokens), and similar derivative tokens where the pool's token address differs from the underlying token. When set, this address is used instead of the underlying token for search and display matching. Only set this if the default matching produces incorrect results.
+- **`isIntrinsicSource`** — Set to `true` only for LST, LRT, or yield-bearing stablecoin primitives whose APY should be used as intrinsic APY for downstream pools. Example: Lido stETH APY can be linked as intrinsic APY for an Aave stETH/wstETH market.
 
 ```typescript
 {
@@ -71,6 +73,7 @@ interface Pool {
     rewardTokens: ['0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9'], // Array of reward token addresses (you can omit this field if a pool doesn't have rewards)
     underlyingTokens: ['0xdAC17F958D2ee523a2206206994597C13D831ec7'], // Array of underlying token addresses from a pool, eg here USDT address on ethereum
     poolMeta: "V3 market", // A string value which can stand for any specific details of a pool position, market, fee tier, lock duration, specific strategy etc
+    isIntrinsicSource: true, // only for LST/LRT/yield-bearing stablecoin primitives used for intrinsic APY linkage
   };
 ```
 

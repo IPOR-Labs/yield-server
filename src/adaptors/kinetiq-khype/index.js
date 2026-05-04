@@ -153,6 +153,7 @@ const getKhypePool = async (block1dAgo, block7dAgo, hypePrice) => {
     ...(curr.gt(0) && { pricePerShare: curr.div(1e18).toNumber() }),
     tvlUsd,
     url: 'https://kinetiq.xyz/stake-hype',
+    isIntrinsicSource: true,
   };
 };
 

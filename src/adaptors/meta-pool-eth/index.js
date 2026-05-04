@@ -62,6 +62,7 @@ const apy = async () => {
       ...calcApy(spRates),
       underlyingTokens: [WETH],
       searchTokenOverride: spETH,
+      isIntrinsicSource: true,
     },
     {
       pool: mpETH,
@@ -72,6 +73,7 @@ const apy = async () => {
       ...calcApy(mpRates),
       underlyingTokens: [WETH],
       searchTokenOverride: mpETH,
+      isIntrinsicSource: true,
     },
   ];
 };

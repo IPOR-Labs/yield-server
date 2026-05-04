@@ -729,7 +729,7 @@ const apy = async () => {
     ...stellarPools,
     ...osmosisPools,
     ...noblePools,
-  ].filter((p) => utils.keepFinite(p));
+  ].filter((p) => utils.keepFinite(p)).map(i => ({...i, isIntrinsicSource: true}));
 };
 
 module.exports = {

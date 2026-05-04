@@ -136,6 +136,7 @@ const apy = async () => {
       searchTokenOverride: weETH,
       rewardTokens: [lrt2],
       url: 'https://ether.fi/app/weeth',
+      isIntrinsicSource: true
     },
     {
       pool: eBTC,
@@ -150,6 +151,7 @@ const apy = async () => {
       underlyingTokens: [LBTC, WBTC],
       searchTokenOverride: eBTC,
       url: 'https://ether.fi/app/ebtc',
+      isIntrinsicSource: true
     },
   ];
 };

@@ -49,6 +49,7 @@ describe(`Running ${process.env.npm_config_adapter} Test`, () => {
       'volumeUsd7d',
       'apyBaseInception',
       'searchTokenOverride',
+      'isIntrinsicSource',
       'token',
       'pricePerShare',
     ];
@@ -199,6 +200,9 @@ describe(`Running ${process.env.npm_config_adapter} Test`, () => {
       pricePerShare: {
         type: 'number',
         min: 0,
+      },
+      isIntrinsicSource: {
+        type: 'boolean',
       },
     };
 

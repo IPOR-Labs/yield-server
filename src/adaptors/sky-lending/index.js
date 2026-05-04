@@ -262,13 +262,13 @@ async function dsr() {
   return {
     pool: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
     project: 'sky-lending',
-    symbol: 'DAI',
+    symbol: 'sDAI',
     chain: 'ethereum',
     token: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
-    poolMeta: 'DSR',
     apy,
     tvlUsd: tvlUsd.toNumber(),
     underlyingTokens: [DAI],
+    isIntrinsicSource: true,
   };
 }
 
@@ -477,6 +477,7 @@ const susdsAPY = async () => {
         tvlUsd: totalSupply * price,
         apy,
         underlyingTokens: [USDS],
+        isIntrinsicSource: true,
       };
     })
   );

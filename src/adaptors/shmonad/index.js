@@ -190,6 +190,7 @@ const apy = async () => {
       ...(Number(shareValueNow) / 1e18 > 0 && { pricePerShare: Number(shareValueNow) / 1e18 }),
       underlyingTokens: [WMON],
       searchTokenOverride: SHMONAD_CONTRACT,
+      isIntrinsicSource: true,
     },
   ];
 };

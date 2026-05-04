@@ -26,6 +26,8 @@ const apy = async () => {
       apyBase: apyValue * 100,
       underlyingTokens: [SOL],
       searchTokenOverride: JUPSOL_ADDRESS,
+      isIntrinsicSource: true,
+
     },
   ];
 };

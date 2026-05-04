@@ -10,6 +10,7 @@ export interface Pool {
   rewardTokens?: Array<string>;
   underlyingTokens?: Array<string>;
   searchTokenOverride?: string;
+  isIntrinsicSource?: boolean;
   token?: string;
   poolMeta?: string;
   url?: string;

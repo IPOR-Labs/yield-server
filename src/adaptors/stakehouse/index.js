@@ -117,6 +117,7 @@ const topLvl = async (chainString, url) => {
         apyBase: Number(Object.values(aprData)[i].APR),
         underlyingTokens: ['0x0000000000000000000000000000000000000000'],
         searchTokenOverride: result.savETHPool,
+        isIntrinsicSource: true,
       });
 
       totalTvl += tvlUsd;
@@ -137,6 +138,7 @@ const topLvl = async (chainString, url) => {
     apyBase: totalApy / noOfActiveLSDs,
     underlyingTokens: ['0x0000000000000000000000000000000000000000'],
     searchTokenOverride: '0x3d1E5Cf16077F349e999d6b21A4f646e83Cd90c5',
+    isIntrinsicSource: true,
   });
 
   return apyList;

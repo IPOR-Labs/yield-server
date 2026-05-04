@@ -37,6 +37,7 @@ const apy = async () => {
       searchTokenOverride: PICOSOL_MINT,
       poolMeta: '2.5% rewards fee',
       url: 'https://app.sanctum.so/stake/picoSOL',
+      isIntrinsicSource: true,
     },
   ];
 };

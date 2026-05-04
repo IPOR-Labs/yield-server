@@ -25,6 +25,7 @@ const getApy = async () => {
       apyBase: apyData.sfrxethApr,
       underlyingTokens: ['0x0000000000000000000000000000000000000000'],
       searchTokenOverride: token,
+      isIntrinsicSource: true,
     },
   ];
 };

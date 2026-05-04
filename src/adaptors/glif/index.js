@@ -42,6 +42,7 @@ const getFilecoinPool = async () => {
     poolMeta: 'GLIF',
     underlyingTokens: [WFIL],
     searchTokenOverride: '0xe764Acf02D8B7c21d2B6A8f0a96C78541e0DC3fd', // iFIL
+    isIntrinsicSource: true,
   };
 };
 
@@ -57,6 +58,7 @@ const getICNTPool = async () => {
     apy: 0,
     poolMeta: 'GLIF',
     underlyingTokens: [ICNT_BASE],
+    isIntrinsicSource: true,
   };
 
   try {

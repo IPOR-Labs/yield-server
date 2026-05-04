@@ -44,6 +44,7 @@ async function sDAIPool() {
     apy: await getApy(),
     tvlUsd: await getTVL(),
     underlyingTokens: [chains.xdai.wxDAI],
+    isIntrinsicSource: true,
   };
   return [sDAIPoolData];
 }

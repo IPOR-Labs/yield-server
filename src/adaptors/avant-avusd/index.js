@@ -19,6 +19,7 @@ async function apy() {
       underlyingTokens: [avUSD],
       poolMeta: 'ERC-4626: savUSD → avUSD',
       url: 'https://www.avantprotocol.com',
+      isIntrinsicSource: true,
     },
   ]
 }

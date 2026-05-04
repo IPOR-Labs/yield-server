@@ -38,6 +38,7 @@ const apy = async () => {
         apyBase: apyRaw * 100,
         underlyingTokens: [pool.underlying],
         searchTokenOverride: pool.mint,
+        isIntrinsicSource: true,
       };
     })
     .filter(Boolean);

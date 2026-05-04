@@ -349,6 +349,7 @@ const apy = async () => {
         underlyingTokens: [PYUSD_ADDRESS],
         poolMeta: '30d unlock',
         url: 'https://app.usd.ai',
+        isIntrinsicSource: true,
       },
     ];
   } catch (error) {

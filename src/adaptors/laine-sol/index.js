@@ -39,6 +39,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: LAINESOL_MINT,
       poolMeta: feePct,
+      isIntrinsicSource: true,
     },
   ];
 };

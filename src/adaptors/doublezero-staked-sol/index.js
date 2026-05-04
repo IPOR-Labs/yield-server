@@ -33,6 +33,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: DZSOL_MINT,
       poolMeta: '6% epoch fee',
+      isIntrinsicSource: true,
     },
   ];
 };

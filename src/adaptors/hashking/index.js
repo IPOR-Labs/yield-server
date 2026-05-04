@@ -77,6 +77,7 @@ const getApy = async () => {
     url,
     underlyingTokens: ['coingecko:filecoin'],
     searchTokenOverride: filHubPool,
+    isIntrinsicSource: true,
   };
 
   return [filecoinAPY];

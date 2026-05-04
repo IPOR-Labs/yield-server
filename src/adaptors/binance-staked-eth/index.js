@@ -43,6 +43,7 @@ const apy = async () => {
       searchTokenOverride: wbeth,
       apyBase: apr,
       tvlUsd: tvlEthereum * ethPrice * wbethExchangeRate,
+      isIntrinsicSource: true,
     },
     {
       pool: `${wbeth}-bsc`,
@@ -53,6 +54,7 @@ const apy = async () => {
       searchTokenOverride: wbeth,
       apyBase: apr,
       tvlUsd: tvlBsc * ethPrice * wbethExchangeRate,
+      isIntrinsicSource: true,
     },
   ];
 };

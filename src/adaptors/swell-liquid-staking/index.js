@@ -46,6 +46,7 @@ const apy = async () => {
       ...(rate > 0 && { pricePerShare: rate }),
       underlyingTokens: ['0x0000000000000000000000000000000000000000'],
       searchTokenOverride: swETH,
+      isIntrinsicSource: true,
     },
   ];
 };

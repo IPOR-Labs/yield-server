@@ -95,6 +95,7 @@ const main = async () => {
       underlyingTokens: [AVAX_ADDRESS],
       searchTokenOverride: SAVAX_ADDRESS,
       poolMeta: 'Unstaking Cooldown: 15days',
+      isIntrinsicSource: true,
     },
   ];
 };

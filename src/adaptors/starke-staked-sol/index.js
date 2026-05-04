@@ -33,6 +33,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: RKSOL_MINT,
       poolMeta: '2.5% epoch fee',
+      isIntrinsicSource: true,
     },
   ];
 };
