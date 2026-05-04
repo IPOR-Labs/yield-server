@@ -28,6 +28,7 @@ const apy = async () => {
       apyBase: apy * 100,
       underlyingTokens: [SOL],
       searchTokenOverride: HSOL_ADDRESS,
+      isIntrinsicSource: true,
     },
   ];
 };

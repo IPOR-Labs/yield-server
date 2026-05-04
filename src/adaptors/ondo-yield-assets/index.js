@@ -2,6 +2,8 @@ const sdk = require('@defillama/sdk');
 const axios = require('axios');
 const utils = require('../utils');
 
+const CANONICAL_USDY = '0x96f6ef951840721adbf46ac996b59e0235cb985c';
+
 // Ondo Finance RWA tokens with oracle configuration
 // USDY oracles have getPriceHistorical(timestamp) for direct historical queries
 // OUSG oracle uses getAssetPrice(token) - requires block-based historical queries
@@ -306,7 +308,7 @@ const getPoolsForChain = async (chain, sharedData) => {
       const apyBase = calculateApy(currentPrice, price30d, 30);
       const apyBase7d = calculateApy(currentPrice, price7d, 7);
 
-      poolData.push({
+      const pool = {
         pool: `${token.address}-${chain}`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: 'ondo-yield-assets',
@@ -320,7 +322,13 @@ const getPoolsForChain = async (chain, sharedData) => {
         url: token.oracleType === 'usdy'
           ? 'https://app.ondo.finance/assets/usdy'
           : 'https://app.ondo.finance/assets/ousg',
-      });
+      };
+
+      if (token.address.toLowerCase() === CANONICAL_USDY) {
+        pool.isIntrinsicSource = true;
+      }
+
+      poolData.push(pool);
     } catch (e) {
       console.error(`Ondo Finance: Error processing ${token.symbol} on ${chain}:`, e.message);
       continue;
@@ -729,7 +737,7 @@ const apy = async () => {
     ...stellarPools,
     ...osmosisPools,
     ...noblePools,
-  ].filter((p) => utils.keepFinite(p));
+  ].filter((p) => utils.keepFinite(p))
 };
 
 module.exports = {

@@ -33,7 +33,8 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: DFDVSOL_MINT,
       poolMeta: '0% rewards fee',
-      url: 'https://app.sanctum.so/stake/dfdvSOL'
+      url: 'https://app.sanctum.so/stake/dfdvSOL',
+      isIntrinsicSource: true,
     },
   ];
 };
@@ -41,5 +42,4 @@ const apy = async () => {
 module.exports = {
   timetravel: false,
   apy,
-  url: 'https://defidevcorp.com/?tab=dfdvSOL',
 };

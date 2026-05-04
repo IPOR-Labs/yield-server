@@ -25,6 +25,7 @@ const apy = async () => {
       apy: apy.lbtc_estimated_apy * 100,
       underlyingTokens: [WBTC],
       searchTokenOverride: token,
+      isIntrinsicSource: true,
     },
   ];
 };

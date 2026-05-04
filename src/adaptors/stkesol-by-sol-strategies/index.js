@@ -40,6 +40,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: STKESOL_MINT,
       poolMeta: feePct,
+      isIntrinsicSource: true,
     },
   ];
 };

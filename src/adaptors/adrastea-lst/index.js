@@ -39,6 +39,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: ADRASOL_MINT,
       poolMeta: feePct,
+      isIntrinsicSource: true,
     },
   ];
 };

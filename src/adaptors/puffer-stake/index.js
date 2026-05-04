@@ -96,6 +96,7 @@ const apy = async () => {
     underlyingTokens: ['0x0000000000000000000000000000000000000000'],
     url: 'https://app.puffer.fi/stake',
     searchTokenOverride: PUFETH,
+    isIntrinsicSource: true,
   };
 
   if (merklRewards?.apyReward > 0) {

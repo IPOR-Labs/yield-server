@@ -34,6 +34,7 @@ const apy = async () => {
       searchTokenOverride: BONKSOL_MINT,
       poolMeta: '5% rewards fee',
       url: 'https://app.sanctum.so/stake/bonkSOL',
+      isIntrinsicSource: true,
     },
   ];
 };

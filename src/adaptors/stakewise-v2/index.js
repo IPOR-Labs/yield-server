@@ -64,6 +64,7 @@ const getApy = async () => {
       apy: Number(apyBN) / 100,
       underlyingTokens: ['0x0000000000000000000000000000000000000000'],
       searchTokenOverride: osTokenAddress,
+      isIntrinsicSource: true,
     },
   ];
 };

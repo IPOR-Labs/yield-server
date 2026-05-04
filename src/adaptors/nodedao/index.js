@@ -106,6 +106,7 @@ const getApy = async () => {
       underlyingTokens: ['0x0000000000000000000000000000000000000000'],
       searchTokenOverride: nETH,
       url: `https://app.nodedao.com/`,
+      isIntrinsicSource: true,
     },
     {
       pool: `${rnETH}-ethereum`.toLowerCase(),
@@ -120,6 +121,7 @@ const getApy = async () => {
       underlyingTokens: ['0x0000000000000000000000000000000000000000'],
       searchTokenOverride: rnETH,
       url: `https://app.nodedao.com/re_stake`,
+      isIntrinsicSource: true,
     },
   ];
 };

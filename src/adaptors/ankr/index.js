@@ -35,6 +35,7 @@ const buildObject = (entry, tokenString, chainString, serviceName) => {
     url: `https://www.ankr.com/staking/stake/${serviceToUrl[serviceName]}`,
     underlyingTokens: [underlying[serviceName]],
     searchTokenOverride: tokenAddresses[serviceName],
+    isIntrinsicSource: true,
   };
 
   return payload;

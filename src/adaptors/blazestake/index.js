@@ -33,6 +33,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: BSOL_MINT,
       poolMeta: '5% rewards fee',
+      isIntrinsicSource: true,
     },
   ];
 };

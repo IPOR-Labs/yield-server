@@ -33,6 +33,7 @@ const apy = async () => {
       underlyingTokens: [SOL],
       searchTokenOverride: LST_MINT,
       poolMeta: '5% epoch fee',
+      isIntrinsicSource: true,
     },
   ];
 };

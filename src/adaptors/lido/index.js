@@ -15,6 +15,7 @@ const topLvl = async () => {
     apyBase: Number(apyData.data.apr),
     underlyingTokens: ['0x0000000000000000000000000000000000000000'],
     searchTokenOverride: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
+    isIntrinsicSource: true
   };
 };
 

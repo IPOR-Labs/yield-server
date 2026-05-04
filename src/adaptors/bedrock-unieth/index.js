@@ -121,6 +121,7 @@ const getApy = async () => {
       apyBase: 100 * Number(ethers.utils.formatEther(apyAsBigNumber30)),
       underlyingTokens: ['0x0000000000000000000000000000000000000000'],
       searchTokenOverride: UNIETH_CONTRACT_ADDRESS,
+      isIntrinsicSource: true,
     }
   ];
 };
