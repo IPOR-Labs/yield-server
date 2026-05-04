@@ -468,7 +468,7 @@ const susdsAPY = async () => {
       const price = prices[key]?.price;
       if (!price) return null;
 
-      return {
+      const pool = {
         pool: sUSDS,
         symbol: 'SUSDS',
         project: 'sky-lending',
@@ -477,8 +477,13 @@ const susdsAPY = async () => {
         tvlUsd: totalSupply * price,
         apy,
         underlyingTokens: [USDS],
-        isIntrinsicSource: true,
       };
+
+      if (chain === 'ethereum') {
+        pool.isIntrinsicSource = true;
+      }
+
+      return pool;
     })
   );
 
