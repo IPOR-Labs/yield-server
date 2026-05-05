@@ -343,6 +343,7 @@ const excludeAdaptors = [
   'lore-finance',
   'rho-markets',
   'zklend',
+  'joe-lend',
 ];
 
 const excludePools = [
