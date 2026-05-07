@@ -14,12 +14,15 @@ const CHAINS = {
   unichain: 130,
   polygon: 137,
   monad: 143,
+  wc: 480,
+  stable: 988,
 };
 
 // Maps chain keys to URL slugs used by app.morpho.org
 // Only entries that differ from the chain key need to be listed
 const CHAIN_URL_SLUG = {
   hyperliquid: 'hyperevm',
+  wc: 'worldchain',
 };
 
 const getChainSlug = (chain) => CHAIN_URL_SLUG[chain] || chain;
@@ -437,7 +440,8 @@ const apy = async () => {
       // override and add OP rewards to this pool
       if (
         vault.address.toLowerCase() ===
-        '0xc30ce6a5758786e0f640cc5f881dd96e9a1c5c59'
+          '0xc30ce6a5758786e0f640cc5f881dd96e9a1c5c59' &&
+        rewardsApy > 0
       ) {
         rewardTokens = ['0x4200000000000000000000000000000000000042'];
         apyReward = rewardsApy * 100;
