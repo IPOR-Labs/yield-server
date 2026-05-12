@@ -48,9 +48,9 @@ async function getVestingRewardsApy(vaultAddress, chain) {
             return 0;
         }
 
-        const apy_18 = ((lastUpdateBalance * ONE_ETHER) / totalAssets)
-            * (SECONDS_IN_YEAR / vestingTime)
-            * 100n;
+        const apy_18 =
+            (lastUpdateBalance * ONE_ETHER * SECONDS_IN_YEAR * 100n) /
+            (totalAssets * vestingTime);
 
         return Number(apy_18) / 1e18;
     } catch (e) {
@@ -64,7 +64,7 @@ const FUSION_API_URL = 'https://api.ipor.io/fusion/vaults';
 const VESTING_APY_VAULTS = {
     ethereum: ["0xb9e806e8f2d94c015ffefa90cd24ecce18f1663c"],
     arbitrum: [],
-    base: ["0x5900C3b72458F12967DC1bef35b92d271F5cDBc1", "0x17d0f109ee895bad0b68aa104aa72bd0b003ad8e", "0xe883426B4fc84A7f5cc86415CAbBef43E73a4CC8"],
+    base: ["0x5900c3b72458f12967dc1bef35b92d271f5cdbc1", "0x17d0f109ee895bad0b68aa104aa72bd0b003ad8e", "0xe883426b4fc84a7f5cc86415cabbef43e73a4cc8"],
     unichain: [],
     tac: [],
     ink: [],
